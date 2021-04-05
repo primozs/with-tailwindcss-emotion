@@ -1,8 +1,9 @@
-import Head from 'next/head'
-import { Global } from '@emotion/react'
-import xw from 'xwind'
+import Head from "next/head";
+import { Global } from "@emotion/react";
+import xw from "xwind";
+import { AppProps } from "next/app";
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -14,7 +15,7 @@ function App({ Component, pageProps }) {
       />
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

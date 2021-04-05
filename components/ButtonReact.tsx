@@ -1,5 +1,5 @@
 /* Example with @emotion/react */
-import xw, { cx } from 'xwind'
+import xw, { cx } from "xwind";
 
 //"react native style"
 const styles = {
@@ -18,10 +18,15 @@ const styles = {
     active:bg-gray-700
     transition duration-150 ease-in-out
   `,
-}
+};
 
-const ButtonReact = ({ className, children, ...props }) => (
-  <button {...props} css={styles.button} className={cx('group', className)}>
+type Props = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+const ButtonReact = ({ className, children, ...props }: Props) => (
+  <button {...props} css={styles.button} className={cx("group", className)}>
     {/* inline style*/}
     <span css={xw`absolute left-0 inset-y-0 flex items-center pl-3`}>
       <svg
@@ -38,6 +43,6 @@ const ButtonReact = ({ className, children, ...props }) => (
     </span>
     {children}
   </button>
-)
+);
 
-export default ButtonReact
+export default ButtonReact;
