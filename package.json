@@ -4,22 +4,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "rm -rf node_modules && yarn install --production && next start"
   },
   "dependencies": {
     "@emotion/react": "^11.1.1",
-    "@emotion/styled": "11.0.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "@emotion/styled": "^11.1.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "next": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@emotion/babel-plugin": "11.0.0",
-    "autoprefixer": "10.0.2",
-    "next": "latest",
-    "postcss": "8.1.10",
+    "@emotion/babel-plugin": "^11.2.0",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.9",
     "tailwindcss": "^2.0.1",
-    "xwind": "0.7.2"
+    "xwind": "^0.8.0"
   },
   "license": "MIT"
 }
